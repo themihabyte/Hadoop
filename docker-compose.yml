@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  # amazoncorretto:
+  #   image: amazoncorretto:latest
+  #   working_dir: /app
+  #   volumes:
+  #     - .:/app
+  #   command: bash compile.sh
+
+  hadoop:
+    image: apache/hadoop:3
+    working_dir: /app
+    command: bash compile.sh
+    volumes:
+      - .:/app
